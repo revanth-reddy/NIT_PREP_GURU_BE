@@ -13,3 +13,11 @@ class Slideshow(models.Model):
         verbose_name_plural = "Slideshow"
     def str(self):
         return self.slide_link
+
+class News(models.Model):
+    news = models.TextField(max_length=500)
+    link = models.CharField(max_length=100)
+    class Meta:
+        verbose_name_plural = "News"
+    def str(self):
+        return self.news

@@ -7,6 +7,7 @@ from django.conf import settings
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register('slideshow', views.SlideViewSet)
+router.register('news', views.NewsViewSet)
 
 urlpatterns = [
     url('', include(router.urls)),
