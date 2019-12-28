@@ -21,3 +21,10 @@ class News(models.Model):
         verbose_name_plural = "News"
     def str(self):
         return self.news
+
+class Companies(models.Model):
+    name = models.CharField(max_length=100)
+    class Meta:
+        verbose_name_plural = "Companies"
+    def str(self):
+        return self.name

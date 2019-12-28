@@ -8,6 +8,7 @@ from django.conf import settings
 router = routers.DefaultRouter()
 router.register('slideshow', views.SlideViewSet)
 router.register('news', views.NewsViewSet)
+router.register('companies', views.CompViewSet)
 
 urlpatterns = [
     url('', include(router.urls)),
