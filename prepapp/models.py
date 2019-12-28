@@ -28,3 +28,20 @@ class Companies(models.Model):
         verbose_name_plural = "Companies"
     def str(self):
         return self.name
+
+class Exp(models.Model):
+    PLACE_CHOICES = (
+        ('FTE', 'FTE'),
+        ('Intern', 'Intern'),
+    )
+    name = models.CharField(max_length=100)
+    job_title = models.CharField(max_length=70)
+    year = models.IntegerField()
+    placement = models.CharField(max_length=7, choices = PLACE_CHOICES)
+    experience = models.TextField()
+    problems = models.TextField()
+    display = models.BooleanField(default=False)
+    class Meta:
+        verbose_name_plural = "Experience"
+    def str(self):
+        return self.name
