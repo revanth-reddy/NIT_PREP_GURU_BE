@@ -19,11 +19,11 @@ class CompSerializer(serializers.HyperlinkedModelSerializer):
 class ExpSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Exp
-        fields = ('name', 'job_title', 'year', 'placement', 'experience', 'problems')
+        fields = ('name', 'job_title', 'year', 'placement', 'experience', 'problems', 'college', 'credits')
 
 
 class ExpDetailSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Exp
-        fields = ('name', 'job_title', 'year', 'experience', 'problems')
+        fields = ('name', 'job_title', 'year', 'experience', 'problems', 'college', 'credits')
 

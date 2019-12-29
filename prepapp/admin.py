@@ -9,5 +9,5 @@ class CompAdmin(admin.ModelAdmin):
 
 admin.site.register(Companies, CompAdmin)
 class ExpAdmin(admin.ModelAdmin):
-    list_display = ('name','placement', 'year', 'display')
+    list_display = ('name', 'placement', 'year', 'college', 'credits', 'display')
 admin.site.register(Exp, ExpAdmin)

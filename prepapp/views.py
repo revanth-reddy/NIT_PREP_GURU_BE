@@ -42,7 +42,7 @@ def FTE_list(request, company):
     List all code snippets, or create a new snippet.
     """
     if request.method == 'GET':
-        exps = Exp.objects.filter(placement = 'FTE', name = company)
+        exps = Exp.objects.filter(placement = 'FTE', name = company, display=True)
         serializer = ExpDetailSerializer(exps, many=True)
         return Response(serializer.data)
 
@@ -52,6 +52,6 @@ def intern_list(request, company):
     List all code snippets, or create a new snippet.
     """
     if request.method == 'GET':
-        exps = Exp.objects.filter(placement = 'Intern', name = company)
+        exps = Exp.objects.filter(placement = 'Intern', name = company, display = True)
         serializer = ExpDetailSerializer(exps, many=True)
         return Response(serializer.data)

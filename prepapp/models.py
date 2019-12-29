@@ -40,6 +40,8 @@ class Exp(models.Model):
     placement = models.CharField(max_length=7, choices = PLACE_CHOICES)
     experience = models.TextField()
     problems = models.TextField()
+    college = models.CharField(max_length=50)
+    credits = models.CharField(max_length=30)
     display = models.BooleanField(default=False)
     class Meta:
         verbose_name_plural = "Experience"
