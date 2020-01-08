@@ -16,7 +16,7 @@ class Slideshow(models.Model):
 
 class News(models.Model):
     news = models.TextField(max_length=500)
-    link = models.CharField(max_length=100)
+    link = models.CharField(max_length=300)
     class Meta:
         verbose_name_plural = "News"
     def str(self):
